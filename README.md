@@ -4,7 +4,7 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby Starter: Minimal Blog
+  Silvialy Tjhin 2025 portfolio 
 </h1>
 
 <p align="center">

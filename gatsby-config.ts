@@ -8,14 +8,15 @@ const config: GatsbyConfig = {
     // You can overwrite values here that are used for the SEO component
     // You can also add new values here to query them like usual
     // See all options: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-minimal-blog/gatsby-config.mjs
-    siteTitle: `Minimal Blog`,
-    siteTitleAlt: `Minimal Blog - Gatsby Theme`,
-    siteHeadline: `Minimal Blog - Gatsby Theme from @lekoarts`,
-    siteUrl: `https://minimal-blog.lekoarts.de`,
-    siteDescription: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.`,
+    siteTitle: `Silvialy Tjhin`,
+    siteTitleAlt: `Silvialy Tjhin • Portfolio`,
+    siteHeadline: `Silvialy Tjhin • Portfolio`,
+    title: `Silvialy Tjhin • Portfolio`,
+    siteUrl: `https://stjhin.com/`,
+    siteDescription: `Portfolio of Silvialy Tjhin — designer & developer.`,
     siteImage: `/banner.jpg`,
     siteLanguage: `en`,
-    author: `@lekoarts_de`,
+    author: `@silvialy`,
   },
   trailingSlash: `always`,
   plugins: [
@@ -23,24 +24,21 @@ const config: GatsbyConfig = {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
       // See the theme's README for all available options
       options: {
+        blogPath: "/projects",
         navigation: [
           {
-            title: `Blog`,
-            slug: `/blog`,
-          },
-          {
-            title: `About`,
-            slug: `/about`,
+            title: `Projects`,
+            slug: `/projects`,
           },
         ],
         externalLinks: [
           {
-            name: `Bluesky`,
-            url: `https://bsky.app/profile/lekoarts.de`,
+            name: `Linkedin`,
+            url: `https://www.linkedin.com/in/silvialy/`,
           },
           {
-            name: `Homepage`,
-            url: `https://www.lekoarts.de?utm_source=minimal-blog&utm_medium=Starter`,
+            name: `Github`,
+            url: `https://github.com/stjhin`,
           },
         ],
       },
@@ -54,11 +52,11 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `minimal-blog - @lekoarts/gatsby-theme-minimal-blog`,
-        short_name: `minimal-blog`,
-        description: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and code highlighting.`,
+        name: `Projects - Silvialy Tjhin`,
+        short_name: `projects`,
+        description: `Portfolio projects by Silvialy Tjhin.`,
         start_url: `/`,
-        background_color: `#fff`,
+  background_color: `#f7fbff`,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#6B46C1`,
@@ -123,11 +121,12 @@ const config: GatsbyConfig = {
   }
 }`,
             output: `rss.xml`,
-            title: `Minimal Blog - @lekoarts/gatsby-theme-minimal-blog`,
+            title: `Projects - Silvialy Tjhin`,
           },
         ],
       },
     },
+    // Note: The theme already sets up Theme UI. If you want to customize it, shadow files under src/gatsby-plugin-theme-ui.
     // You can remove this plugin if you don't need it
     shouldAnalyseBundle && {
       resolve: `gatsby-plugin-webpack-statoscope`,

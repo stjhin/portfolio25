@@ -171,17 +171,17 @@ Code block with line numbers, highlighting, language, and title:
 
 <div data-testid="code-block">
 
-```tsx title=src/components/blog.tsx highlight=7-8,19,21 withLineNumbers
+```tsx title=src/components/projects.tsx highlight=7-8,19,21 withLineNumbers
 import * as React from "react";
 
-const Blog = ({ posts }: PostsProps) => {
+const Projects = ({ posts }: PostsProps) => {
   const { tagsPath, basePath } = useSiteMetadata();
 
   return (
     <Layout>
       <Flex sx={{ alignItems: `center`, justifyContent: `space-between` }}>
         <Heading variant="h2" as="h2">
-          Blog
+          Projects
         </Heading>
         <Styled.a
           as={Link}
@@ -196,7 +196,7 @@ const Blog = ({ posts }: PostsProps) => {
   );
 };
 
-export default Blog;
+export default Projects;
 ```
 
 </div>
