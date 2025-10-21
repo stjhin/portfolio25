@@ -8,11 +8,20 @@
 
 - Forked from [LekoArts](https://github.com/LekoArts/gatsby-starter-minimal-blog)
 - Things I used to create this: Gatsby JS, Github Copilot
+- Responsive Design
+- Dark Mode/Light Mode
+- Project Query with Tags
 
 ## ✍️ Description
 
-Welcome! This is an experiment of updating my portfolio in 2025 using Gatsby JS using just Github Copilot. I want to see how far I can push AI capabilities through this personal project. I know some front end development, but I am no way a developer. I do plan to learn how to create my backend using either Wordpress or Headless CMS such as Sanity, but probably not for this project.
+Welcome! This is an experiment and also for me to update my portfolio in 2025 using Gatsby JS using just Github Copilot. I want to see how far I can push AI capabilities through this personal project. I know some front end development, but I am no way a developer. I do have future plan to learn how to create my backend using either Wordpress or Headless CMS such as Sanity, but probably not for this project.
 
-## ✨ Getting Started
+## ✨ Content & Navigation
 
-### 1. **Create a Gatsby site.**
+There is a top navigation of: Projects and external links to my [Linkedin](https://www.linkedin.com/in/silvialy/) and [Github](https://github.com/stjhin). I plan to slowly update the Projects and add my own Projects.
+
+### Project 1
+
+### Project 2
+
+### Project 3
