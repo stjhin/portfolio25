@@ -22,7 +22,8 @@ type ListingProps = {
 }
 
 const Listing = ({ posts, className = ``, showTags = true }: ListingProps) => (
-  <section sx={{ mb: [5, 6, 7] }} className={className}>
+  // Remove large bottom margins on sections (previously 4/8/16rem); keep only item spacing inside
+  <section sx={{ mb: 0 }} className={className}>
     {posts.map((post) => (
       <div key={post.slug} sx={{ mb: 4 }}>
         <BlogListItem post={post} showTags={showTags} />

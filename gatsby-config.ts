@@ -40,6 +40,10 @@ const config: GatsbyConfig = {
             name: `Github`,
             url: `https://github.com/stjhin`,
           },
+          {
+            name: `Resume`,
+            url: `https://docs.google.com/document/d/e/2PACX-1vQBA0ZEs7LJqJUN0GuSPxoOgIatsZzkssrh9VMelH9fF5Yptz03OhTKLFH1h2YX3axVfAL1m4bI8u8F/pub`,
+          },
         ],
       },
     },

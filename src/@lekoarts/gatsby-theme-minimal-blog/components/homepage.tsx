@@ -34,7 +34,12 @@ const Homepage = ({ posts }: MBHomepageProps) => {
     <Layout>
       <h1 sx={visuallyHidden}>{siteTitle}</h1>
       {/* Text-only hero section sourced from texts/hero.mdx (no image) */}
-      <section sx={{ mb: [4, 8, 16] }} data-hero-marker="true">
+      {/* Responsive vertical spacing per standard breakpoints:
+          - 1rem: mobile
+          - 3rem: between mobile and iPad (e.g., >=640px and <768px)
+          - 10rem: iPad and above (>=768px, including desktop)
+        */}
+      <section sx={{ my: ["1rem", "3rem", "10rem"] }} data-hero-marker="true">
         <Hero />
       </section>
       <Title text="Projects">
