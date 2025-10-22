@@ -34,6 +34,7 @@ const Homepage = ({ posts }: MBHomepageProps) => {
     <Layout>
       <h1 sx={visuallyHidden}>{siteTitle}</h1>
       <section sx={{ mb: [5, 6, 7], p: { fontSize: [1, 2, 3], mt: 2 }, variant: `section_hero` }}>
+        <div data-hero-marker="true" />
         <Hero />
       </section>
       <Title text="Projects">

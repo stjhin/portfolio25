@@ -1,4 +1,5 @@
 import { graphql } from "gatsby"
+// Use the core homepage wrapper (shadowed) which maps data to the themed component.
 import HomepageComponent from "@lekoarts/gatsby-theme-minimal-blog-core/src/components/homepage"
 export { Head } from "@lekoarts/gatsby-theme-minimal-blog-core/src/components/homepage"
 

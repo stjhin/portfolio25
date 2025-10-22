@@ -29,7 +29,7 @@ const BlogListItem = ({ post, showTags = true }: BlogListItemProps) => {
           <img
             src={thumb}
             alt={post.title}
-            sx={{ width: 128, height: 80, objectFit: `cover`, borderRadius: 3, boxShadow: `0 2px 6px rgba(0,0,0,0.12)` }}
+            sx={{ width: 240, height: 160, objectFit: `cover`, borderRadius: 3, boxShadow: `0 2px 6px rgba(0,0,0,0.12)` }}
           />
         </Link>
       )}
