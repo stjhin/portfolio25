@@ -5,15 +5,23 @@ export { Head } from "@lekoarts/gatsby-theme-minimal-blog-core/src/components/ho
 export default HomepageComponent
 
 export const query = graphql`
-  query ($formatString: String!) {
+  query HomepageYearOnly {
     allPost(sort: { date: DESC }, limit: 3) {
       nodes {
         slug
         title
-        date(formatString: $formatString)
+        date(formatString: "YYYY")
         excerpt
         timeToRead
         description
+        banner {
+          publicURL
+          childImageSharp {
+            resize(width: 800, quality: 80) {
+              src
+            }
+          }
+        }
         tags {
           name
           slug

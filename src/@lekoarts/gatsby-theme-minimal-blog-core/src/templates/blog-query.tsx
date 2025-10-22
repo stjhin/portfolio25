@@ -1,24 +1,5 @@
-import { graphql } from "gatsby"
-import Projects, { Head } from "../../../../components/projects"
-
-export default Projects
-export { Head }
-
-export const query = graphql`
-  query ($formatString: String!) {
-    allPost(sort: { date: DESC }) {
-      nodes {
-        slug
-        title
-        date(formatString: $formatString)
-        excerpt
-        timeToRead
-        description
-        tags {
-          name
-          slug
-        }
-      }
-    }
-  }
-`
+// This deep-path template shadow is intentionally query-less to avoid Gatsby
+// "GraphQL query in non-page component" warnings. The actual page template is
+// shadowed at: src/@lekoarts/gatsby-theme-minimal-blog-core/templates/blog-query.tsx
+// Re-export the component and Head without defining a page query here.
+export { default, Head } from "../../templates/blog-query"

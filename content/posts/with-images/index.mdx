@@ -1,36 +1,39 @@
 ---
-title: With Images
-date: 2022-09-17
-description: Defence Against the Dark Arts (abbreviated as DADA) is a subject taught at Hogwarts School of Witchcraft and Wizardry and Ilvermorny School of Witchcraft and Wizardry. In this class, students study and learn how to defend themselves against all aspects of the Dark Arts, including dark creatures, curses, hexes and jinxes (dark charms), and duelling.
+title: Infinity Design System
+date: 2025-10-20
+slug: "/projects/with-images/"
+description: End-to-End Design-to-Code Design System utilizing Figma MCP Server and Github Copilot in VS Code.
 tags:
-  - Tutorial
-banner: ./defence-against-the-dark-arts.jpg
+  - Design System
+  - Figma MCP
+  - AI Pipeline
+  - System Thinking
+
+banner: ./infinity-hero.png
 ---
 
-Thestral dirigible plums, Viktor Krum hexed memory charm Animagus Invisibility Cloak three-headed Dog. Half-Blood Prince Invisibility Cloak cauldron cakes, hiya Harry! Basilisk venom Umbridge swiveling blue eye Levicorpus, nitwit blubber oddment tweak. Chasers Winky quills The Boy Who Lived bat spleens cupboard under the stairs flying motorcycle. Sirius Black Holyhead Harpies, you’ve got dirt on your nose. Floating candles Sir Cadogan The Sight three hoops disciplinary hearing. Grindlewald pig’s tail Sorcerer's Stone biting teacup. Side-along dragon-scale suits Filch 20 points, Mr. Potter.
+Infinity Design System (NDA name) utilizes the most up-to-date MCP Server and AI models in VS Code to increase adoption and ease of use for all stakeholders from designers, developers, product manager, and marketing. This allows the closest we have from design in figma to production ready code. I am responsible in setting up responsive components, variables, and code connect in Figma, ensuring that all naming structure and code syntax is scalable to development using MCP Server. The dream is to lead the rest of product by design through this design system.
 
-Squashy armchairs dirt on your nose brass scales crush the Sopophorous bean with flat side of silver dagger, releases juice better than cutting. Full moon Whomping Willow three turns should do it lemon drops. Locomotor trunks owl treats that will be 50 points, Mr. Potter. Witch Weekly, he will rise again and he will come for us, headmaster Erumpent horn. Fenrir Grayback horseless carriages ‘zis is a chance many would die for!
-
-![Potions Class](./potions.jpg)
-
-Half-giant jinxes peg-leg gillywater broken glasses large black dog Great Hall. Nearly-Headless Nick now string them together, and answer me this, which creature would you be unwilling to kiss? Poltergeist sticking charm, troll umbrella stand flying cars golden locket Lily Potter. Pumpkin juice Trevor wave your wand out glass orbs, a Grim knitted hats. Stan Shunpike doe patronus, suck his soul Muggle-Born large order of drills the trace. Bred in captivity fell through the veil, quaffle blue flame ickle diddykins Aragog. Yer a wizard, Harry Doxycide the woes of Mrs. Weasley Goblet of Fire.
-
-## This is a secondary heading
-
-Exume lumos protego leviosa. Aresto expecto engorgio engorgio leviosa legilimens stupefy incantartem mobilarbus accio funnunculus. Serpensortia locomotor incarcerous aguamenti colloportus. Totalus morsmordre stupefy charm- aresto me momentum incarcerous lacarnum locomotor. Revelio relashio veritaserum impedimenta expecto quietus. Legilimens crucio hover cruciatus alohomora tarantallegra petrificus petrificus charm mortis. Nox lumos crucio expecto aparecium lacarnum charm rictusempra pepperup.
+![Button](./infinity-button.png)
 
 ---
 
-Sectumsempra aresto exume reducio momentum tarantallegra patronum. Totalus amortentia momentum mortis quietus evanesco. Aparecium mobilicorpus aparecium petrificus engorgio evanesco aparecium. Incarcerous serpensortia petrificus conjunctivitis deletrius immobilus sonorous mortis episkey impedimenta. Immobilus lacarnum totalus protean. Funnunculus exume serpensortia inflamarae relashio alohomora locomotor inflamarae lumos. Skele-gro totalus.
+## Scalable System
 
-## Another secondary heading
+I ensure that the naming structure of all components and variables are scalable, so even developers are using the same name in their CSS style tokens. We use atomic names and split the naming levels into three(3): Global, Semantic, Component. Global is for all Foundation level tokens such as color and typography. Semantic is for things shared by more than one component, such as background-color. Component is for tokens that are unique and specific to one component and they are not repeatable.
 
-### Third heading level
+![Form](./infinity-form.png)
 
-Legilimens colloportus aparecium aresto aparecium leviosa unctuous inflamarae. Quietus mobilarbus incarcerous stupefy confundus leviosa. Quietus funnunculus leviosa evanesco babbling evanesco lumos expecto incarcerous mortis.
+## Responsive component
 
-Reparo reparo alohomora vow. Lacarnum locomotor sonorus lumos incantato reducto imperius locomotor legilimens evanesco. Locomotor patronum stupefy lumos scourgify lacarnum. Portus charm inflamarae leviosa stupefy. Incarcerous totalus incantatem impedimenta morsmordre leviosa unction ennervate. Rictusempra aparecium incendio alohomora totalus quietus serpensortia protego.
+All component is responsive that allow designer to quickly make prototype to show clients to validate the design and allow hand-off as reusable component via Github Copilot in VS Code. As we are using MCP Server and utilizing LLMs through Github Copilot in VS Code, we ensured that all text-based UI element has a name that will make the LLMs understand better, such as ensuring that each Figma layers are properly named and has Dev Mode annotation separated by their types such as for interactions and accessibility. We found that LLM-based model understand text-based input better.
 
-Mobilicorpus reducto liberacorpus crucio. Petrificus lumos lacarnum legilimens legilimens quietus vipera arania me patronum reducio. Episkey reducio quietus mobilicorpus fidelius aparecium. Mobilicorpus dissendium protego engorgio petrificus mortis alohomora quietus.
+## Consistency
 
-Sonorus tarantallegra leviosa wingardium finite stupefy.
+To ensure consistent quality, we utilize the text-based prompt of LLMs. For example, we have standard text-based prompt to create the react prototype for non-developers to create a prototype using the least possible prompts through MCP that ensures WCAG compliant and that it is creating reusable components that we can ship to developers that allow them to turn it into production ready code.
+
+---
+
+## Challenges
+
+Because it is a new technology, we had to spend more time with experimentation and validate that it works for the end-to-end pipeline that we are creating, involving multiple stakeholders who are not technical or know much about development. Another challenge is the unknown and doing the whole process without a clear path that it will work.

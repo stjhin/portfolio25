@@ -1,7 +1,21 @@
-<Text
-  children={`Hi.`}
-  sx={{ fontSize: [4, 5, 6], fontWeight: `bold`, color: `heading` }}
+<img
+  src="/projects/with-images/infinity-hero.png"
+  alt="Infinity Design System hero"
+  sx={{
+    width: "100%",
+    maxWidth: 1200,
+    height: "auto",
+    borderRadius: 4,
+    mb: [3, 4],
+    boxShadow: (t) => `0 2px 8px ${t.colors.shadow || "rgba(0,0,0,0.15)"}`,
+  }}
 />
+
+<Text sx={{ fontSize: [4, 5, 6], fontWeight: `bold`, color: `heading` }}>👋 Hi.</Text>
+<Text as="p">
+  A design generalist who bridges business goals with user needs & product
+  strategy.
+</Text>
 
 <Text as="p">
   I leverage System Thinking and Web Development knowledge to build
@@ -16,19 +30,12 @@
   of both the business and its users.
 </Text>
 
-<Text
-  children={`Looking for designer | developer?`}
-  sx={{ fontSize: [4, 5, 6], fontWeight: `bold`, color: `heading` }}
-/>
+<Text sx={{ fontSize: [4, 5, 6], fontWeight: `bold`, color: `heading` }}>
+  Looking for designer | developer?
+  </Text>
 
-<Text
-  as="span"
-  sx={{ fontSize: [4, 5, 6], fontWeight: `bold`, color: `heading` }}
->
-  <a
-    href="mailto:silvia@stjhin.com"
-    style={{ color: "inherit", textDecoration: "underline" }}
-  >
+<Text as="span" sx={{ fontSize: [4, 5, 6], fontWeight: `bold`, color: `heading` }}>
+  <a href="mailto:silvia@stjhin.com" style={{ color: "inherit", textDecoration: "underline" }}>
     silvia@stjhin.com
   </a>
 </Text>
