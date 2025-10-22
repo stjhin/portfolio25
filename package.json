@@ -6,15 +6,16 @@
   "author": "LekoArts",
   "license": "0BSD",
   "starter-name": "gatsby-starter-minimal-blog",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "develop:cypress": "cross-env CYPRESS_SUPPORT=y yarn develop",
-    "build:cypress": "cross-env CYPRESS_SUPPORT=y yarn build",
-    "start": "gatsby develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
-  },
+"scripts": {
+  "build": "gatsby build",
+  "develop": "gatsby develop",
+  "develop:cypress": "cross-env CYPRESS_SUPPORT=y yarn develop",
+  "build:cypress": "cross-env CYPRESS_SUPPORT=y yarn build",
+  "start": "gatsby develop",
+  "serve": "gatsby serve",
+  "clean": "gatsby clean",
+  "typecheck": "tsc --noEmit"
+}
   "dependencies": {
     "@lekoarts/gatsby-theme-minimal-blog": "^6.2.6",
     "gatsby": "^5.14.5",
