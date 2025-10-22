@@ -27,6 +27,12 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Debug: List Content Directory 🐛
+        run: |
+          echo "Current working directory: $(pwd)"
+          echo "Listing contents of 'content' directory:"
+          ls -aR content
+          
       - name: Build Gatsby site
         # CRUCIAL: Add --prefix-paths if deploying to a Project Site (e.g., user.github.io/repo-name)
         run: npm run build -- --prefix-paths 
