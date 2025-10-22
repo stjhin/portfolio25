@@ -1,0 +1,48 @@
+name: Deploy Gatsby Site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Change to your default branch name (e.g., master)
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        # Use a version compatible with your Gatsby project
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18' # Recommended for modern Gatsby
+          cache: 'npm' # Use 'yarn' or 'pnpm' if you use those
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Gatsby site
+        # CRUCIAL: Add --prefix-paths if deploying to a Project Site (e.g., user.github.io/repo-name)
+        run: npm run build -- --prefix-paths 
+        env:
+          # If you have environment variables for your build, list them here
+          NODE_OPTIONS: "--max-old-space-size=4096" # Prevents build from being "Killed" on larger sites
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public # Gatsby's default build output directory
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
