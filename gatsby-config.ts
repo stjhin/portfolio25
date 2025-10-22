@@ -25,7 +25,7 @@ const config: GatsbyConfig = {
       // See the theme's README for all available options
       options: {
         // 🚨 FIX: Explicitly set the pagesPath option within the theme's options
-        pagesPath: `${__dirname}/content/pages`,
+        pagesPath: `content/pages`, // Simply 'content/pages'
         blogPath: "/projects",
         navigation: [
           {
