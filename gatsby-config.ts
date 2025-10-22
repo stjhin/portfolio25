@@ -4,6 +4,9 @@ import "dotenv/config"
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
 const config: GatsbyConfig = {
+  // 🚨 FIX: This prefix is crucial for GitHub Pages to find your assets (like images).
+  // CHANGE '/portfolio' to your actual repository name if it is different.
+  pathPrefix: `/portfolio`, 
   siteMetadata: {
     // You can overwrite values here that are used for the SEO component
     // You can also add new values here to query them like usual
@@ -24,8 +27,7 @@ const config: GatsbyConfig = {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
       // See the theme's README for all available options
       options: {
-        // 🚨 FIX: Explicitly set the pagesPath option within the theme's options
-        pagesPath: `content/pages`, // Simply 'content/pages'
+        pagesPath: `${__dirname}/content/pages`,
         blogPath: "/projects",
         navigation: [
           {
