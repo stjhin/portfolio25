@@ -13,13 +13,22 @@ const config: GatsbyConfig = {
     siteHeadline: `Silvialy Tjhin • Portfolio`,
     title: `Silvialy Tjhin • Portfolio`,
     siteUrl: `https://stjhin.com/`,
-    siteDescription: `Portfolio of Silvialy Tjhin — designer & developer.`,
+    siteDescription: `Portfolio of Silvialy Tjhin — Designer & UI Developer.`,
     siteImage: `/banner.jpg`,
     siteLanguage: `en`,
     author: `@silvialy`,
   },
   trailingSlash: `always`,
   plugins: [
+    // 🚨 FIX FOR GATSBY-SOURCE-FILESYSTEM ERROR
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/content/pages`, // Explicitly source the path
+      },
+    }, // 🚨 IMPORTANT COMMA TO SEPARATE PLUGINS
+
     {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
       // See the theme's README for all available options
@@ -39,6 +48,7 @@ const config: GatsbyConfig = {
           {
             name: `Github`,
             url: `https://github.com/stjhin`,
+            
           },
           {
             name: `Resume`,
@@ -60,9 +70,9 @@ const config: GatsbyConfig = {
         short_name: `projects`,
         description: `Portfolio projects by Silvialy Tjhin.`,
         start_url: `/`,
-  background_color: `#f7fbff`,
+        background_color: `#f7fbff`,
         // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
+        // https://css- tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#6B46C1`,
         display: `standalone`,
         icons: [
@@ -141,41 +151,3 @@ const config: GatsbyConfig = {
       },
     },
   ].filter(Boolean) as Array<PluginRef>,
-}
-
-export default config
-
-interface IPostTag {
-  name: string
-  slug: string
-}
-
-interface IPost {
-  slug: string
-  title: string
-  defer: boolean
-  date: string
-  excerpt: string
-  contentFilePath: string
-  html: string
-  timeToRead: number
-  wordCount: number
-  tags: Array<IPostTag>
-  banner: any
-  description: string
-  canonicalUrl: string
-}
-
-interface IAllPost {
-  nodes: Array<IPost>
-}
-
-interface ISiteMetadata {
-  siteTitle: string
-  siteTitleAlt: string
-  siteHeadline: string
-  siteUrl: string
-  siteDescription: string
-  siteImage: string
-  author: string
-}
