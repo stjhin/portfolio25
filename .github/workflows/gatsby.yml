@@ -3,7 +3,7 @@ name: Deploy Gatsby Site to GitHub Pages
 on:
   push:
     branches:
-      - main # Change to your default branch name (e.g., master)
+      - master # Change to your default branch name (e.g., master)
 
 jobs:
   build-and-deploy:
