@@ -20,8 +20,16 @@ Welcome! This is an experiment and also for me to update my portfolio in 2025 us
 
 There is a top navigation of: Projects and external links to my [Linkedin](https://www.linkedin.com/in/silvialy/) and [Github](https://github.com/stjhin). I plan to slowly update the Projects and add my own Projects.
 
-### Project 1
+### Infinity Design Sysytem
 
-### Project 2
+Used Figma MCP to create this for rapid prototyping and efficient dev hand-off.
 
-### Project 3
+### Mercury
+
+NDA Project with multiple products for multiple platforms.
+
+### Jupiter
+
+NDA Project where I was consulted about 2 products for multiple stakeholders.
+
+### Project 4 TBD

@@ -1,28 +1,37 @@
-<Text sx={{ fontSize: [4, 5, 6], fontWeight: `bold`, color: `heading` }}>👋 Hi.</Text>
-<Text as="p">
+<Text as="div" sx={{ fontSize: [4, 5, 6], fontWeight: `bold`, color: `heading`, "& p": { fontSize: "inherit", lineHeight: "inherit", margin: 0 } }}>
+  👋 Hi.
+</Text>
+<Text as="div">
   A design generalist who bridges business goals with user needs & product
   strategy.
 </Text>
 
-<Text as="p">
+<Text as="div">
   I leverage System Thinking and Web Development knowledge to build
   user-centered design systems that are easy to adopt, technically feasible, and
   scale effortlessly for complex Enterprise products.
 </Text>
 
-<Text as="p">
+<Text as="div">
   My design process is highly collaborative and iterative. I believe in
   involving stakeholders and users early on to validate assumptions and gather
   feedback. This approach helps to ensure that the final product meets the needs
   of both the business and its users.
 </Text>
 
-<Text sx={{ fontSize: [4, 5, 6], fontWeight: `bold`, color: `heading` }}>
-  Looking for designer | developer?
-  </Text>
+<Text as="div" sx={{ fontSize: [4, 5, 6], fontWeight: `bold`, color: `heading`, "& p": { fontSize: "inherit", lineHeight: "inherit", margin: 0 } }}>
+  Looking for Designer | UI Developer?
+</Text>
 
-<Text as="span" sx={{ fontSize: [4, 5, 6], fontWeight: `bold`, color: `heading` }}>
-  <a href="mailto:silvia@stjhin.com" style={{ color: "inherit", textDecoration: "underline" }}>
-    silvia@stjhin.com
-  </a>
+<Text
+  as="div"
+  sx={{
+    fontSize: [4, 5, 6],
+    fontWeight: `bold`,
+    color: `heading`,
+    "& p": { fontSize: "inherit", lineHeight: "inherit", margin: 0 },
+    "& a": { color: "inherit", textDecoration: "underline" }
+  }}
+>
+  silvia@stjhin.com
 </Text>
