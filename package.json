@@ -6,16 +6,21 @@
   "author": "LekoArts",
   "license": "0BSD",
   "starter-name": "gatsby-starter-minimal-blog",
-"scripts": {
-  "build": "gatsby build",
-  "develop": "gatsby develop",
-  "develop:cypress": "cross-env CYPRESS_SUPPORT=y yarn develop",
-  "build:cypress": "cross-env CYPRESS_SUPPORT=y yarn build",
-  "start": "gatsby develop",
-  "serve": "gatsby serve",
-  "clean": "gatsby clean",
-  "typecheck": "tsc --noEmit"
-}
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "preview": "gatsby serve -p 9001 -H 0.0.0.0",
+    "preview:static": "serve -s public -l 9001",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "develop:cypress": "cross-env CYPRESS_SUPPORT=y yarn develop",
+    "build:cypress": "cross-env CYPRESS_SUPPORT=y yarn build",
+    "gatsby-plugin-theme-ui": "^0.16.0",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "typecheck": "tsc --noEmit"
+  },
   "dependencies": {
     "@lekoarts/gatsby-theme-minimal-blog": "^6.2.6",
     "gatsby": "^5.14.5",
@@ -30,6 +35,9 @@
     "theme-ui": "^0.17.2"
   },
   "devDependencies": {
+  "engines": {
+    "node": ">=18"
+  }
     "@types/node": "^22.15.33",
     "@types/react": "^18.3.20",
     "@types/react-dom": "^18.3.7",
