@@ -1,1 +1,2 @@
-export { wrapRootElement } from 'gatsby-plugin-theme-ui';
+// Intentionally no custom SSR APIs; rely on gatsby-plugin-theme-ui provider
+export {}

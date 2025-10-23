@@ -1,3 +1,2 @@
-declare module 'gatsby-plugin-theme-ui' {
-  export const wrapRootElement: any;
-}
+// Removed incorrect ambient declaration that conflicted with runtime exports
+export {}

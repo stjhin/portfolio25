@@ -3,10 +3,12 @@ import "dotenv/config"
 
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
+const onNetlify = process.env.NETLIFY === "true"
+const onGitHubPages = process.env.DEPLOY_TARGET === "ghpages" || process.env.GITHUB_PAGES === "true"
+
 const config: GatsbyConfig = {
-  // 🚨 FIX: This prefix is crucial for GitHub Pages to find your assets (like images).
-  // CHANGE '/portfolio' to your actual repository name if it is different.
-  pathPrefix: `/portfolio`, 
+  // Use pathPrefix only for GitHub Pages builds; disable on Netlify to keep asset paths correct
+  pathPrefix: onGitHubPages && !onNetlify ? `/portfolio25` : undefined,
   siteMetadata: {
     // You can overwrite values here that are used for the SEO component
     // You can also add new values here to query them like usual
@@ -23,6 +25,11 @@ const config: GatsbyConfig = {
   },
   trailingSlash: `always`,
   plugins: [
+    // Ensure Theme UI provider is registered explicitly
+    {
+      resolve: `gatsby-plugin-theme-ui`,
+      options: {},
+    },
     {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
       // See the theme's README for all available options
