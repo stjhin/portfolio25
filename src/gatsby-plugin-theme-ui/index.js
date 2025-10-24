@@ -25,12 +25,12 @@ const themeObj = {
 		modes: {
 			// Explicit light mode values (previously the base)
 			light: {
-				text: tailwind.colors.gray[8],
+				text: '#1A202C',
 				background: '#F1F6FC',
 				primary: tailwind.colors.purple[7],
 				secondary: '#5f6c80',
 				toggleIcon: tailwind.colors.gray[8],
-				heading: tailwind.colors.black,
+				heading: '#1A202C',
 				divide: tailwind.colors.gray[4],
 				muted: tailwind.colors.gray[2],
 				white: '#F1F6FC',
