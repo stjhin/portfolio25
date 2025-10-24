@@ -7,7 +7,9 @@ const themeObj = {
 	config: {
 		initialColorModeName: 'light',
 	},
-	colors: {
+		colors: {
+			// Light mode background color override
+			background: '#F1F6FC',
 		primary: tailwind.colors.purple[7],
 		secondary: '#5f6c80',
 		toggleIcon: tailwind.colors.gray[8],
