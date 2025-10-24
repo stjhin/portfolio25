@@ -9,7 +9,7 @@ export const onRenderBody = ({ setHeadComponents }) => {
 			key="force-dark-first-paint"
 			dangerouslySetInnerHTML={{
 				__html:
-					"(function(){try{var k='theme-ui-color-mode';if(!localStorage.getItem(k)){localStorage.setItem(k,'dark');document.documentElement.classList.add('theme-ui-dark');}}catch(e){}})();",
+					"(function(){try{var k='theme-ui-color-mode';localStorage.setItem(k,'dark');var de=document.documentElement;de.classList.remove('theme-ui-light');de.classList.add('theme-ui-dark');}catch(e){}})();",
 			}}
 		/>,
 	])
