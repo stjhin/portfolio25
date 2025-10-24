@@ -25,11 +25,6 @@ const config: GatsbyConfig = {
   },
   trailingSlash: `always`,
   plugins: [
-    // Ensure Theme UI provider is registered explicitly
-    {
-      resolve: `gatsby-plugin-theme-ui`,
-      options: {},
-    },
     {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
       // See the theme's README for all available options
