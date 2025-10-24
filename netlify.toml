@@ -1,0 +1,25 @@
+[build]
+  command = "npm run build"
+  publish = "public"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# Disable Netlify Asset Optimization post-processing which breaks CSS-in-JS SSR styles
+[build.processing]
+  skip_processing = true
+
+# Alternatively, be explicit (kept for clarity if you prefer granular control)
+#[build.processing.css]
+#  bundle = false
+#  minify = false
+#
+#[build.processing.js]
+#  bundle = false
+#  minify = false
+#
+#[build.processing.html]
+#  pretty_urls = false
+#
+#[build.processing.images]
+#  compress = false
