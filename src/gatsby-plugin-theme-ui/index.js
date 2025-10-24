@@ -5,19 +5,38 @@ import tailwind from '@theme-ui/preset-tailwind'
 
 const themeObj = {
 	config: {
-		initialColorModeName: 'light',
+		initialColorModeName: 'dark',
+		// Ensure we don't follow system preference for first paint
+		useColorSchemeMediaQuery: false,
 	},
-		colors: {
-			// Light mode background color override
-			background: '#F1F6FC',
-		primary: tailwind.colors.purple[7],
-		secondary: '#5f6c80',
-		toggleIcon: tailwind.colors.gray[8],
-		heading: tailwind.colors.black,
-		divide: tailwind.colors.gray[4],
-		muted: tailwind.colors.gray[2],
-		highlightLineBg: 'rgba(0, 0, 0, 0.035)',
+	colors: {
+		// Base (default) is DARK to ensure first paint is dark
+		text: tailwind.colors.gray[4],
+		primary: tailwind.colors.purple[4],
+		secondary: '#8a9ab0',
+		toggleIcon: tailwind.colors.gray[4],
+		background: '#1A202C',
+		heading: tailwind.colors.white,
+		divide: tailwind.colors.gray[8],
+		muted: tailwind.colors.gray[8],
+		highlightLineBg: 'rgba(255, 255, 255, 0.1)',
+		// Requested: set "white" to #F1F6FC (light-blue white)
+		white: '#F1F6FC',
 		modes: {
+			// Explicit light mode values (previously the base)
+			light: {
+				text: tailwind.colors.gray[8],
+				background: '#F1F6FC',
+				primary: tailwind.colors.purple[7],
+				secondary: '#5f6c80',
+				toggleIcon: tailwind.colors.gray[8],
+				heading: tailwind.colors.black,
+				divide: tailwind.colors.gray[4],
+				muted: tailwind.colors.gray[2],
+				white: '#F1F6FC',
+				highlightLineBg: 'rgba(0, 0, 0, 0.035)',
+			},
+			// Keep a named dark mode for compatibility (matches base)
 			dark: {
 				text: tailwind.colors.gray[4],
 				primary: tailwind.colors.purple[4],
@@ -27,6 +46,7 @@ const themeObj = {
 				heading: tailwind.colors.white,
 				divide: tailwind.colors.gray[8],
 				muted: tailwind.colors.gray[8],
+				white: '#F1F6FC',
 				highlightLineBg: 'rgba(255, 255, 255, 0.1)',
 			},
 		},
