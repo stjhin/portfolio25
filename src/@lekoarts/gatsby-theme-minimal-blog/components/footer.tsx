@@ -15,7 +15,18 @@ const Footer = () => (
       }}
     >
       <div>Copyright © All Rights Reserved.</div>
-      <div>Design & Content by Silvialy Tjhin.</div>
+      <div>
+         <a
+          href="https://github.com/LekoArts/astro-theme-minimal-blog"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Original Theme by LekoArts.
+        </a>
+        {" "}
+        Design & Content by Silvialy Tjhin. {" "}
+  
+      </div>
     </div>
   </footer>
 )
